@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;  
+  background: #1f3c88; 
+  color: white;
+  font-size: 15px;  
+  height: 55px;     
+  box-sizing: border-box;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 40px;
+}
+
+.app-name {
+  font-size: 18px;
+  font-weight: regular;
+  font-style: poppins;
+  margin-right: 10px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar-links li {
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #1abc9c; 
+  font-style: poppins;
+  border: none;
+  padding: 8px 10px;
+  margin-right: 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: regular;
+}
