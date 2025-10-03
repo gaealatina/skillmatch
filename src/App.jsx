@@ -4,7 +4,7 @@ import RegisterPage from "./components/RegisterPage";
 import LoginPage from "./components/LoginPage";
 
 function App() {
-  const [view, setView] = useState<"landing" | "register" | "login">("landing");
+  const [view, setView] = useState("landing");
 
   return (
     <div className="min-h-screen bg-gray-50">

@@ -1,10 +1,6 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 
-interface Props {
-  setView: (view: "landing" | "register" | "login") => void;
-}
-
-const RegisterPage: FC<Props> = ({ setView }) => {
+const RegisterPage = ({ setView }) => {
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -13,11 +9,11 @@ const RegisterPage: FC<Props> = ({ setView }) => {
     role: "freelancer",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Registering:", form);
   };

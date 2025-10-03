@@ -1,17 +1,13 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 
-interface Props {
-  setView: (view: "landing" | "register" | "login") => void;
-}
-
-const LoginPage: FC<Props> = ({ setView }) => {
+const LoginPage = ({ setView }) => {
   const [form, setForm] = useState({ email: "", password: "" });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Logging in:", form);
   };

@@ -1,11 +1,7 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import { Menu, X, BarChart3, TrendingUp, Target, Quote } from 'lucide-react';
 
-interface Props {
-  setView: (view: "landing" | "register" | "login") => void;
-}
-
-const LandingPage: FC<Props> = ({ setView }) => {
+const LandingPage = ({ setView }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -149,7 +145,7 @@ const LandingPage: FC<Props> = ({ setView }) => {
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=350&fit=crop" 
+                  src="src/assets/working.png" 
                   alt="Team collaboration"
                   className="w-full h-auto rounded-lg"
                 />
@@ -216,82 +212,82 @@ const LandingPage: FC<Props> = ({ setView }) => {
           </div>
         </section>
 
-       // {/* Testimonials Section - New section added with ID for Testimonials, positioned before CTA (near bottom) */}
-<section id="testimonials" className="py-16 bg-gray-100 scroll-mt-16">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl font-bold text-gray-900 mb-3 font-poppins">What Our Users Say</h2>
-      <p className="text-gray-600 max-w-2xl mx-auto text-sm font-poppins">
-        Hear from students and educators who have transformed their learning with SkillMatch.
-      </p>
-    </div>
+        {/* Testimonials Section */}
+        <section id="testimonials" className="py-16 bg-gray-100 scroll-mt-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-3 font-poppins">What Our Users Say</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto text-sm font-poppins">
+                Hear from students and educators who have transformed their learning with SkillMatch.
+              </p>
+            </div>
 
-    <div className="grid md:grid-cols-3 gap-6">
-      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out group">
-        <div className="flex items-center mb-4 group-hover:text-teal-600 transition-colors duration-300">
-          <Quote className="w-5 h-5 text-teal-500 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-          <Quote className="w-5 h-5 text-teal-500 rotate-180 group-hover:-rotate-168 transition-transform duration-300" />
-        </div>
-        <p className="text-gray-600 text-sm mb-4 italic group-hover:text-gray-800 transition-colors duration-300">
-          "SkillMatch has revolutionized how I track my progress. The heatmaps are incredibly insightful!"
-        </p>
-        <div className="flex items-center group-hover:scale-105 transition-transform duration-300">
-          <img 
-            src="" 
-            alt="User  " 
-            className="w-10 h-10 rounded-full mr-3 group-hover:shadow-md transition-shadow duration-300"
-          />
-          <div>
-            <p className="font-semibold text-gray-900 text-sm group-hover:text-teal-600 transition-colors duration-300">Gaea Latina</p>
-            <p className="text-gray-500 text-xs">Student</p>
-          </div>
-        </div>
-      </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                <div className="flex items-center mb-4 group-hover:text-teal-600 transition-colors duration-300">
+                  <Quote className="w-5 h-5 text-teal-500 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                  <Quote className="w-5 h-5 text-teal-500 rotate-180 group-hover:-rotate-168 transition-transform duration-300" />
+                </div>
+                <p className="text-gray-600 text-sm mb-4 italic group-hover:text-gray-800 transition-colors duration-300">
+                  "SkillMatch has revolutionized how I track my progress. The heatmaps are incredibly insightful!"
+                </p>
+                <div className="flex items-center group-hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="" 
+                    alt="User" 
+                    className="w-10 h-10 rounded-full mr-3 group-hover:shadow-md transition-shadow duration-300"
+                  />
+                  <div>
+                    <p className="font-semibold text-gray-900 text-sm group-hover:text-teal-600 transition-colors duration-300">Gaea Latina</p>
+                    <p className="text-gray-500 text-xs">Student</p>
+                  </div>
+                </div>
+              </div>
 
-      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out group">
-        <div className="flex items-center mb-4 group-hover:text-teal-600 transition-colors duration-300">
-          <Quote className="w-5 h-5 text-teal-500 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-          <Quote className="w-5 h-5 text-teal-500 rotate-180 group-hover:-rotate-168 transition-transform duration-300" />
-        </div>
-        <p className="text-gray-600 text-sm mb-4 italic group-hover:text-gray-800 transition-colors duration-300">
-          "As an educator, this tool helps me understand my students' growth patterns like never before."
-        </p>
-        <div className="flex items-center group-hover:scale-105 transition-transform duration-300">
-          <img 
-            src="" 
-            alt="User  " 
-            className="w-10 h-10 rounded-full mr-3 group-hover:shadow-md transition-shadow duration-300"
-          />
-          <div>
-            <p className="font-semibold text-gray-900 text-sm group-hover:text-teal-600 transition-colors duration-300">Jeremie Diaz</p>
-            <p className="text-gray-500 text-xs">Professor</p>
-          </div>
-        </div>
-      </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                <div className="flex items-center mb-4 group-hover:text-teal-600 transition-colors duration-300">
+                  <Quote className="w-5 h-5 text-teal-500 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                  <Quote className="w-5 h-5 text-teal-500 rotate-180 group-hover:-rotate-168 transition-transform duration-300" />
+                </div>
+                <p className="text-gray-600 text-sm mb-4 italic group-hover:text-gray-800 transition-colors duration-300">
+                  "As an educator, this tool helps me understand my students' growth patterns like never before."
+                </p>
+                <div className="flex items-center group-hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="" 
+                    alt="User" 
+                    className="w-10 h-10 rounded-full mr-3 group-hover:shadow-md transition-shadow duration-300"
+                  />
+                  <div>
+                    <p className="font-semibold text-gray-900 text-sm group-hover:text-teal-600 transition-colors duration-300">Jeremie Diaz</p>
+                    <p className="text-gray-500 text-xs">Professor</p>
+                  </div>
+                </div>
+              </div>
 
-      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out group">
-        <div className="flex items-center mb-4 group-hover:text-teal-600 transition-colors duration-300">
-          <Quote className="w-5 h-5 text-teal-500 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-          <Quote className="w-5 h-5 text-teal-500 rotate-180 group-hover:-rotate-168 transition-transform duration-300" />
-        </div>
-        <p className="text-gray-600 text-sm mb-4 italic group-hover:text-gray-800 transition-colors duration-300">
-          "The role history tracker gave me clarity on my career path. Highly recommend!"
-        </p>
-        <div className="flex items-center group-hover:scale-105 transition-transform duration-300">
-          <img 
-            src="" 
-            alt="User  " 
-            className="w-10 h-10 rounded-full mr-3 group-hover:shadow-md transition-shadow duration-300"
-          />
-          <div>
-            <p className="font-semibold text-gray-900 text-sm group-hover:text-teal-600 transition-colors duration-300">Engilbert Comadre</p>
-            <p className="text-gray-500 text-xs">Professor</p>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                <div className="flex items-center mb-4 group-hover:text-teal-600 transition-colors duration-300">
+                  <Quote className="w-5 h-5 text-teal-500 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                  <Quote className="w-5 h-5 text-teal-500 rotate-180 group-hover:-rotate-168 transition-transform duration-300" />
+                </div>
+                <p className="text-gray-600 text-sm mb-4 italic group-hover:text-gray-800 transition-colors duration-300">
+                  "The role history tracker gave me clarity on my career path. Highly recommend!"
+                </p>
+                <div className="flex items-center group-hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src="" 
+                    alt="User" 
+                    className="w-10 h-10 rounded-full mr-3 group-hover:shadow-md transition-shadow duration-300"
+                  />
+                  <div>
+                    <p className="font-semibold text-gray-900 text-sm group-hover:text-teal-600 transition-colors duration-300">Engilbert Comadre</p>
+                    <p className="text-gray-500 text-xs">Professor</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
 
         {/* CTA Section */}
         <section className="bg-blue-900 text-white py-16 scroll-mt-16">
