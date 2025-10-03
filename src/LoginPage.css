@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F3F4F6;
+}
+
+.back_btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  padding-top: 13px;
+  margin-bottom: 10px;
+}
+
+.back_btn:hover {
+  color: #14B7A6;
+  transition: color 0.3s ease;
+}
+
+.login-center-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  color: black;
+}
+
+.welcome{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.welcome_p{
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 33px;
+}
+
+.login-card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding-right: 41px;
+  padding-left:41px ;
+  padding-top: 56px;
+  padding-bottom:50px;
+  width: auto;
+  color: #000000;
+}
+.email_password_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 527px;
+}
+
+
+.email_input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 0.5rem;
+  font-size: 15px;
+  height: 50px;
+  outline: none;
+}
+
+.email_input:focus {
+  border-color: #14B7A6;
+  box-shadow: 0 0 0 2px #14B7A633;
+}
+
+.password_input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 0.5rem;
+  font-size: 15px;
+  height: 50px;
+  outline: none;
+}
+
+.password_input:focus {
+  border-color: #14B7A6;
+  box-shadow: 0 0 0 2px #14B7A633;
+}
+
+#btn_password {
+  background: none;
+  border: none;
+  color: #14B7A6;
+  cursor: pointer;
+  font-size: 0.875rem;
+  text-decoration: none;
+  padding-top: 13px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+}
+
+.login_btn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #14B7A6;
+  color: white;
+  font-size: 15px;
+  height: 50px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.other_methods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 23px;
+}
+
+.other_methods a:hover {
+  background-color: #44ada3;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.register_btn {
+  background: none;
+  border: none;
+  color: #14B7A6;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  padding-top: 13px;
+  margin-bottom: 10px;
+}
