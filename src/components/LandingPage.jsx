@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, BarChart3, TrendingUp, Target, Quote } from 'lucide-react';
+import "../LandingPage.css"
 
 const LandingPage = ({ setView }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ const LandingPage = ({ setView }) => {
                 <a href="#how-it-works" className="hover:text-teal-200 self-center transition-colors duration-200 font-poppins">How It Works</a>
                 <a href="#testimonials" className="hover:text-teal-200 self-center transition-colors duration-200 font-poppins">Testimonials</a>
               </div>
-              <div className="hidden md:flex items-center h-full">
+              <div id="loginBtn" className="hidden md:flex items-center h-full">
                 <button 
                   onClick={() => setView("login")}
                   className="bg-teal-400 text-white-900 px-5 py-2 rounded-md font-medium hover:bg-teal-300 self-center font-poppins transition-colors duration-200"
@@ -52,37 +53,21 @@ const LandingPage = ({ setView }) => {
       {/* Main Content - Add padding-top to account for fixed nav */}
       <div className="pt-16">
         {/* Hero Section - ID for Home */}
-        <section id="home" className="bg-gradient-to-r from-blue-900 via-blue-700 to-teal-400 text-white py-16 md:py-24 min-h-screen scroll-mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4 font-poppins">
-                  Track What You Learn.<br />
-                  Show What You're Worth.
-                </h1>
-                <p className="text-base text-white-100 mb-6 font-poppins">
-                  SkillMatch helps students and educators visualize skill development, monitor role history, and make informed decisions based on experience and learning goals.
-                </p>
-                <div className="flex gap-3">
-                  <button 
-                    onClick={() => setView("register")}
-                    className="bg-teal-400 text-white px-6 py-2.5 rounded-md font-poppins hover:bg-teal-300 transition-colors duration-200"
-                  >
-                    Get Started
-                  </button>
-                  <button className="bg-blue-800 text-white px-6 py-2.5 rounded-md font-medium hover:bg-blue-700 transition-colors duration-200">
-                    Learn more
-                  </button>
-                </div>
+        <section id="home" className="hero-hero scroll-mt-16 ">
+          <div className="hero-inner landing-pt-nav">
+            <div className="hero-left">
+              <h1 className="font-poppins">Track What You Learn.<br />Show What You're Worth.</h1>
+              <p className="font-poppins">
+                SkillMatch helps students and educators visualize skill development, monitor role history, and make informed decisions based on experience and learning goals.
+              </p>
+              <div className="hero-cta">
+                <button onClick={() => setView("register")} className="btn-primary">Get Started</button>
+                <button className="btn-secondary">Learn more</button>
               </div>
-              <div>
-                <div className="bg-white rounded-lg overflow-hidden shadow-xl">
-                  <img 
-                    src="src/assets/image.png" 
-                    alt="Professional working"
-                    className="w-full h-auto"
-                  />
-                </div>
+            </div>
+            <div>
+              <div className="bg-white rounded-lg overflow-hidden shadow-xl">
+                <img src="src/assets/image.png" alt="Professional working" className="w-full h-auto" />
               </div>
             </div>
           </div>
@@ -99,8 +84,8 @@ const LandingPage = ({ setView }) => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
-                <div className="bg-teal-100 w-12 h-12 rounded flex items-center justify-center mb-4">
+              <div className="feature-card">
+                <div className="feature-icon-wrap">
                   <BarChart3 className="w-6 h-6 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2 font-poppins">Skill Heatmaps</h3>
@@ -109,8 +94,8 @@ const LandingPage = ({ setView }) => {
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
-                <div className="bg-teal-100 w-12 h-12 rounded flex items-center justify-center mb-4">
+              <div className="feature-card">
+                <div className="feature-icon-wrap">
                   <TrendingUp className="w-6 h-6 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2 font-poppins">Learning Insights</h3>
@@ -119,8 +104,8 @@ const LandingPage = ({ setView }) => {
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
-                <div className="bg-teal-100 w-12 h-12 rounded flex items-center justify-center mb-4">
+              <div className="feature-card">
+                <div className="feature-icon-wrap">
                   <Target className="w-6 h-6 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2 font-poppins">Role History Tracker</h3>
@@ -222,8 +207,8 @@ const LandingPage = ({ setView }) => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out group">
+        <div className="grid md:grid-cols-3 gap-6">
+        <div className="testimonial group">
                 <div className="flex items-center mb-4 group-hover:text-teal-600 transition-colors duration-300">
                   <Quote className="w-5 h-5 text-teal-500 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                   <Quote className="w-5 h-5 text-teal-500 rotate-180 group-hover:-rotate-168 transition-transform duration-300" />
@@ -244,7 +229,7 @@ const LandingPage = ({ setView }) => {
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out group">
+          <div className="testimonial group">
                 <div className="flex items-center mb-4 group-hover:text-teal-600 transition-colors duration-300">
                   <Quote className="w-5 h-5 text-teal-500 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                   <Quote className="w-5 h-5 text-teal-500 rotate-180 group-hover:-rotate-168 transition-transform duration-300" />
@@ -265,7 +250,7 @@ const LandingPage = ({ setView }) => {
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out group">
+          <div className="testimonial group">
                 <div className="flex items-center mb-4 group-hover:text-teal-600 transition-colors duration-300">
                   <Quote className="w-5 h-5 text-teal-500 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                   <Quote className="w-5 h-5 text-teal-500 rotate-180 group-hover:-rotate-168 transition-transform duration-300" />

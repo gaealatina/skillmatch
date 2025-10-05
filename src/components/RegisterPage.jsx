@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../registerPage.css";
 
 const RegisterPage = ({ setView }) => {
   const [form, setForm] = useState({
@@ -19,8 +20,9 @@ const RegisterPage = ({ setView }) => {
   };
 
   return (
+    <div className="card">
     <div className="max-w-md mx-auto py-16 px-6">
-      <h2 className="text-3xl font-bold text-center text-indigo-600 mb-6">Create an Account</h2>
+      <h2 className="text-3xl font-bold text-center text-black-600 mb-6">Create an Account</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
@@ -67,11 +69,8 @@ const RegisterPage = ({ setView }) => {
         <button onClick={() => setView("login")} className="text-indigo-600 underline">
           Login here
         </button>
-        <button
-          onClick={() => setView("landing")}
-          className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
-        ></button>
       </p>
+    </div>
     </div>
   );
 };

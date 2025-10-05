@@ -1,0 +1,100 @@
+
+/* Ensure nav height offset is handled */
+.landing-pt-nav {
+  padding-top: 4rem; /* matches nav height */
+}
+
+/* Hero */
+.hero-hero {
+  background: linear-gradient(90deg, #1e3a8a 0%, #14B7A6 100%);
+  color: #ffffff;
+  padding: 12.1rem 0;
+}
+
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  line-height: 1.05;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1.25rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+
+.btn-primary {
+  background: #14B7A6;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 100;
+}
+
+.btn-primary:hover {
+  background: #058d82;
+  transition: background 0.3s ease;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background: rgb(255, 255, 255);
+  transition: background 0.3s ease;
+  color: #000000;
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Feature cards */
+.feature-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 8px 24px rgba(2,6,23,0.08);
+}
+
+.feature-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20,183,166,0.08);
+  margin-bottom: 0.75rem;
+}
+
+/* Testimonials card tweaks */
+.testimonial {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+
+@media (min-width: 768px) {
+  .hero-left h1 { font-size: 3rem; }
+}
