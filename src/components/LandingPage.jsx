@@ -84,32 +84,32 @@ const LandingPage = ({ setView }) => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="feature-card">
-                <div className="feature-icon-wrap">
-                  <BarChart3 className="w-6 h-6 text-teal-600" />
+              <div className="feature-card group hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+                <div className="feature-icon-wrap group-hover:bg-teal-600 group-hover:scale-110 transition-all duration-300">
+                  <BarChart3 className="w-6 h-6 text-teal-600 group-hover:text-white group-hover:rotate-12 transition-all duration-300" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 font-poppins">Skill Heatmaps</h3>
-                <p className="text-gray-600 text-sm font-poppins">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 font-poppins group-hover:text-teal-600 transition-colors duration-300">Skill Heatmaps</h3>
+                <p className="text-gray-600 text-sm font-poppins group-hover:text-gray-800 transition-colors duration-300">
                   Visualize your strengths and weaknesses at a glance with our interactive heatmaps.
                 </p>
               </div>
 
-              <div className="feature-card">
-                <div className="feature-icon-wrap">
-                  <TrendingUp className="w-6 h-6 text-teal-600" />
+              <div className="feature-card group hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+                <div className="feature-icon-wrap group-hover:bg-teal-600 group-hover:scale-110 transition-all duration-300">
+                  <TrendingUp className="w-6 h-6 text-teal-600 group-hover:text-white group-hover:rotate-12 transition-all duration-300" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 font-poppins">Learning Insights</h3>
-                <p className="text-gray-600 text-sm font-poppins">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 font-poppins group-hover:text-teal-600 transition-colors duration-300">Learning Insights</h3>
+                <p className="text-gray-600 text-sm font-poppins group-hover:text-gray-800 transition-colors duration-300">
                   Get personalized recommendations based on your skill progression and role history to guide future growth
                 </p>
               </div>
 
-              <div className="feature-card">
-                <div className="feature-icon-wrap">
-                  <Target className="w-6 h-6 text-teal-600" />
+              <div className="feature-card group hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+                <div className="feature-icon-wrap group-hover:bg-teal-600 group-hover:scale-110 transition-all duration-300">
+                  <Target className="w-6 h-6 text-teal-600 group-hover:text-white group-hover:rotate-12 transition-all duration-300" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 font-poppins">Role History Tracker</h3>
-                <p className="text-gray-600 text-sm font-poppins">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 font-poppins group-hover:text-teal-600 transition-colors duration-300">Role History Tracker</h3>
+                <p className="text-gray-600 text-sm font-poppins group-hover:text-gray-800 transition-colors duration-300">
                   Track your development across projects and get recommendations for new roles to try.
                 </p>
               </div>
@@ -283,7 +283,7 @@ const LandingPage = ({ setView }) => {
             </p>
             <button 
               onClick={() => setView("register")}
-              className="bg-teal-400 text-white-900 px-8 py-3 rounded-md font-medium font-poppins hover:bg-teal-300 transition-colors duration-200"
+              className="btn-primary"
             >
               Get Started
             </button>
